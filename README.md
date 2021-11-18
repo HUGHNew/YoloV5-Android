@@ -1,4 +1,13 @@
+>   完整操作
+
+1.   `python export.py --weight _wt`
+2.   [`python -m onnxsim _model.onnx _model-sim.onnx`]
+3.   `python onnx2ncnn _.onnx`
+
+
+
 Notes for YoloV5 deployment to Android
+
 > using [NCNN](https://github.com/Tencent/ncnn) framework
 
 simple demo proj(ncnn) reference:<https://github.com/nihui/ncnn-android-yolov5/>
@@ -13,6 +22,14 @@ PyTorch(.pt) -> onnx --onnx2ncnn-->ncnn
 <https://github.com/Tencent/ncnn/wiki/use-ncnn-with-pytorch-or-onnx>
 
 > PyTorch(.pt) --official tool(._export)-->.onnx--[onnxsim](https://github.com/daquexian/onnx-simplifier)-->.onnx--onnx2ncnn-->ncnn(.bin/.param)
+
+```mermaid
+graph LR
+pt--export-->onnx-- onnx2ncnn-->ncnn
+onnx-- onnxsim-->onnx
+```
+
+onnxsim:`python -m onnxsim _model.onnx _model-sim.onnx`
 
 
 ## demo-project
