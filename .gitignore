@@ -1,3 +1,10 @@
+# Model files
+*.bin
+*.param
+*.onnx
+*.pt
+*.ptl
+
 # Built application files
 *.apk
 *.ap_
@@ -97,5 +104,6 @@ fastlane/readme.md
 
 # Executables
 *.exe
+!onnx2ncnn-*.exe
 *.out
 *.app
