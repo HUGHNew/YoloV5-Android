@@ -1,4 +1,4 @@
->   完整操作
+>   operations
 
 1.   `python export.py --weight _wt`
 2.   [`python -m onnxsim _model.onnx _model-sim.onnx`]
