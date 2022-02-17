@@ -28,6 +28,9 @@ parser.add_argument('--data', type=str, default=ROOT / 'data/coco128.yaml')
 
 usage:python3 onnx2ncnn.py [64|86] file
 
-默认使用64位的 `weights/last-sim.onnx` 文件
-
-结果保存在runs的下一个exp文件夹
+```python
+python3 onnx2ncnn.py # use onnx2ncnn-64.exe to convert weights/last-sim.onnx by default
+python3 onnx2ncnn.py file # specify the file to convert
+python3 onnx2ncnn.py 86 file # specify the file and execute program to convert
+```
+results(.param .bin file) would be saved to runs/exp\* ~~\* means saved by sequence~~
